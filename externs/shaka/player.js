@@ -856,7 +856,8 @@ shaka.extern.InitDataTransform;
  *   manifestPreprocessor: function(!Element),
  *   sequenceMode: boolean,
  *   enableAudioGroups: boolean,
- *   multiTypeVariantsAllowed: boolean
+ *   multiTypeVariantsAllowed: boolean,
+ *   updatePeriod: number
  * }}
  *
  * @property {string} clockSyncUri
@@ -928,6 +929,8 @@ shaka.extern.InitDataTransform;
  *   Might result in undesirable behavior if mediaSource.codecSwitchingStrategy
  *   is not set to SMOOTH.
  *   Defaults to true if SMOOTH codec switching is supported, RELOAD overwise.
+ * @property {number} updatePeriod
+ *   Override the update time for the manifest
  * @exportDoc
  */
 shaka.extern.DashManifestConfiguration;
