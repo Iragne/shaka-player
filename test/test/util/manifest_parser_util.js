@@ -37,6 +37,11 @@ shaka.test.ManifestParser = class {
     const positionAfterEnd =
         stream.segmentIndex.find(lastExpectedReference.endTime);
     expect(positionAfterEnd).toBe(null);
+    let totalRef = 0;
+    stream.segmentIndex.forEachTopLevelReference((s) => {
+      totalRef++;
+    });
+    expect(totalRef).toBe(references.length);
   }
 
   /**
